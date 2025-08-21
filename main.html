@@ -3,16 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HASHAN-MD MINI BOT</title>
+  <title>LAKSHAN-MD MINI BOT</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
-      background: #000010;
+      background: linear-gradient(135deg, #00001a, #0a1a3d);
       color: #fff;
       overflow: hidden;
+      min-height: 100vh;
     }
 
     .neon-bubbles {
@@ -29,25 +35,25 @@
     .neon-bubbles span {
       position: absolute;
       display: block;
-      width: 12px;
-      height: 12px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
-      background: radial-gradient(circle, #00f0ff, #0077ff);
-      animation: rise 7s linear infinite;
-      filter: drop-shadow(0 0 6px #00f0ff);
-      opacity: 0.7;
+      background: radial-gradient(circle, #00f0ff, #ff0000);
+      animation: rise 8s linear infinite;
+      filter: drop-shadow(0 0 8px #00f0ff);
+      opacity: 0.6;
     }
 
     @keyframes rise {
       0% {
-        transform: translateY(100vh) scale(0.5);
+        transform: translateY(100vh) scale(0.4);
         opacity: 0;
       }
-      30% {
-        opacity: 1;
+      40% {
+        opacity: 0.8;
       }
       100% {
-        transform: translateY(-10vh) scale(1.2);
+        transform: translateY(-20vh) scale(1.5);
         opacity: 0;
       }
     }
@@ -63,97 +69,115 @@
     }
 
     .box {
-      background: rgba(0, 0, 50, 0.4);
-      backdrop-filter: blur(15px);
-      padding: 2rem;
-      border-radius: 25px;
-      box-shadow: 0 0 25px #7edcff;
+      background: rgba(0, 0, 50, 0.5);
+      backdrop-filter: blur(20px);
+      padding: 2.5rem;
+      border-radius: 30px;
+      box-shadow: 0 0 30px rgba(126, 220, 255, 0.5);
       text-align: center;
-      width: 370px;
-      animation: fadeIn 1s ease-in-out;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      max-width: 400px;
+      animation: fadeIn 1.2s ease-in-out;
+      border: 2px solid rgba(255, 255, 255, 0.3);
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    h3, h6 {
-      color: #7edcff;
+    h3 {
+      color:#b0f;
+      font-size: 2rem;
+      font-weight: 700;
       margin: 10px 0;
-      text-shadow: 0 0 10px #b0f0ff;
+      text-shadow: 0 0 12px #b0f0ff;
+    }
+
+    h6 {
+      color: #aeeeff;
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 8px 0;
+      text-shadow: 0 0 8px #b0f0ff;
     }
 
     .input-container {
-      margin-top: 20px;
+      margin-top: 25px;
       display: flex;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(126, 220, 255, 0.3);
     }
 
     .input-container input {
       width: 70%;
-      padding: 0.8rem;
-      border-radius: 10px 0 0 10px;
+      padding: 1rem;
       border: none;
       outline: none;
-      background: #fff;
+      background: #f0f8ff;
       font-size: 1rem;
       color: #000;
+      transition: background 0.3s;
+    }
+
+    .input-container input:focus {
+      background: #e6f0ff;
     }
 
     .input-container button {
       width: 30%;
-      padding: 0.8rem;
+      padding: 1rem;
       border: none;
-      border-radius: 0 10px 10px 0;
-      background: #33bbff;
+      background: linear-gradient(45deg, #ff0000, #66d9ff);
       color: #fff;
-      font-weight: bold;
+      font-weight: 600;
       cursor: pointer;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
     .input-container button:hover {
-      background: #66d9ff;
-      box-shadow: 0 0 10px #84f0ff;
+      background: linear-gradient(45deg, #ff0000, #99e6ff);
+      box-shadow: 0 0 15px #84f0ff;
+      transform: translateY(-2px);
     }
 
     .centered-text {
       margin-top: 20px;
-      color: white;
-      font-weight: bold;
-      text-shadow: 0 0 5px #84dfff;
+      color: #fff;
+      font-weight: 600;
+      text-shadow: 0 0 6px #84dfff;
     }
 
     .info-container {
-      margin-top: 25px;
-      background: rgba(0, 0, 80, 0.3);
-      padding: 1rem 1.5rem;
-      border-radius: 20px;
-      color: #aeeeff;
-      box-shadow: 0 0 25px #7edcff;
-      animation: glow 2s infinite ease-in-out;
+      margin-top: 30px;
+      background: rgba(0, 0, 80, 0.4);
+      padding: 1.5rem;
+      border-radius: 25px;
+      color: #ff0000;
+      box-shadow: 0 0 25px rgba(126, 220, 255, 0.5);
+      animation: glow 2.5s infinite ease-in-out;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
       flex-direction: column;
+      gap: 12px;
     }
 
     @keyframes glow {
-      0%, 100% { box-shadow: 0 0 15px #7edcff; }
-      50% { box-shadow: 0 0 30px #b0f0ff; }
+      0%, 100% { box-shadow: 0 0 15px rgba(126, 220, 255, 0.5); }
+      50% { box-shadow: 0 0 35px rgba(176, 240, 255, 0.7); }
     }
 
     .info-item {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+      font-size: 0.9rem;
     }
 
     .info-item i {
-      animation: rotate 6s linear infinite;
-      color: #7edcff;
+      animation: rotate 5s linear infinite;
+      color: #ff0000;
+      font-size: 1.2rem;
     }
 
     @keyframes rotate {
@@ -163,12 +187,14 @@
 
     #copy {
       cursor: pointer;
-      animation: blink 1s infinite;
+      animation: blink 1.2s infinite;
+      font-weight: 600;
+      transition: color 0.3s;
     }
 
     @keyframes blink {
       0%, 100% { opacity: 1; }
-      50% { opacity: 0.6; }
+      50% { opacity: 0.7; }
     }
   </style>
 </head>
@@ -176,19 +202,17 @@
   <div class="neon-bubbles" id="neon-bubbles"></div>
   <div class="container">
     <div class="box">
-      <i class="fa fa-user" style="color:#7edcff;"></i>
-      <h3>HASHAN-MD MINI BOT</h3>
-      <h6>CREATE BY HASHIYA TECH</h6>
+      <i class="fa fa-user" style="color:#ff0000; font-size: 2rem;"></i>
+      <h3>LAKSHAN-MD MINI BOT</h3>
+      <h6>CREATED BY lakshan </h6>
       <h6>📱 Enter your number with country code</h6>
       <div class="input-container">
-        <input placeholder="9470604xxxx" type="number" id="number">
+        <input placeholder="+9476273×xxx" type="number" id="number">
         <button id="submit">Submit</button>
       </div>
       <a id="waiting-message" class="centered-text" style="display: none;">Please wait a while...</a>
       <main id="pair"></main>
-
       <div class="info-container">
-     
         <div class="info-item">
           <i class="fas fa-clock"></i> Time: <span id="uptime">00:00:00</span>
         </div>
@@ -199,14 +223,14 @@
   <script>
     // Neon bubbles background
     const container = document.getElementById("neon-bubbles");
-    const count = 40;
+    const count = 50;
     for (let i = 0; i < count; i++) {
       const bubble = document.createElement("span");
       bubble.style.left = Math.random() * 100 + "vw";
-      bubble.style.animationDuration = 5 + Math.random() * 5 + "s";
-      bubble.style.animationDelay = Math.random() * 8 + "s";
+      bubble.style.animationDuration = 6 + Math.random() * 6 + "s";
+      bubble.style.animationDelay = Math.random() * 10 + "s";
       const hue = Math.floor(Math.random() * 360);
-      bubble.style.background = `radial-gradient(circle, hsl(${hue}, 100%, 75%), hsl(${hue}, 100%, 45%))`;
+      bubble.style.background = `radial-gradient(circle, hsl(${hue}, 100%, 80%), hsl(${hue}, 100%, 50%))`;
       container.appendChild(bubble);
     }
 
@@ -233,30 +257,30 @@
       let text = document.getElementById("copy").innerText;
       let obj = document.getElementById("copy");
       await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
-      obj.innerText = "COPIED";
-      obj.style = "color:lime;font-weight:bold";
+      obj.innerText = "COPIED!";
+      obj.style = "color:lime;font-weight:700";
       setTimeout(() => {
         obj.innerText = text;
-        obj.style = "color:deepskyblue;font-weight:bold";
-      }, 500);
+        obj.style = "color:deepskyblue;font-weight:600";
+      }, 600);
     }
 
     b.addEventListener("click", async (e) => {
       e.preventDefault();
       if (!c.value) {
-        a.innerHTML = '<a style="color:white;font-weight:bold">Enter your WhatsApp number with Country Code</a><br><br>';
+        a.innerHTML = '<a style="color:white;font-weight:600">Enter your WhatsApp number with Country Code</a><br><br>';
       } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
-        a.innerHTML = '<a style="color:red;font-weight:bold">Invalid Number</a><br><br>';
+        a.innerHTML = '<a style="color:red;font-weight:600">Invalid Number</a><br><br>';
       } else {
         const number = c.value.replace(/[^0-9]/g, "");
         c.type = "text";
         c.value = "+" + number;
-        c.style = "color:black;font-size:20px";
-        a.innerHTML = '<a style="color:white;font-weight:bold">Please Wait...</a><br><br>';
+        c.style = "color:black;font-size:18px";
+        a.innerHTML = '<a style="color:white;font-weight:600">Please Wait...</a><br><br>';
         let res = await fetch(`/code?number=${number}`);
         let data = await res.json();
         let code = data.code || "Service Unavailable";
-        a.innerHTML = `<div id="copy" onclick="Copy()" style="color:deepskyblue;font-weight:bold; cursor:pointer;">CODE: <span style="color:white;">${code}</span></div><br><br>`;
+        a.innerHTML = `<div id="copy" onclick="Copy()" style="color:deepskyblue;font-weight:600; cursor:pointer;">CODE: <span style="color:white;">${code}</span></div><br><br>`;
       }
     });
   </script>
